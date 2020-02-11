@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Axios from "axios";
 import NowPlaying from "./nowplaying";
+import { HomeWrapper } from "./style";
 
 export default function HomePage() {
   const [nowPlaying, setnowPlaying] = useState([]);
@@ -31,8 +32,8 @@ export default function HomePage() {
   };
 
   return (
-    <React.Fragment>
+    <HomeWrapper>
       <NowPlaying movie={nowPlaying} />
-    </React.Fragment>
+    </HomeWrapper>
   );
 }
