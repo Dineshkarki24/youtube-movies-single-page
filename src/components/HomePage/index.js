@@ -25,7 +25,6 @@ export default function HomePage() {
         `https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}&language=en-US&page=1`
       )
     ]);
-
     setnowPlaying(allMovies[0].data.results);
     setpopularMovies(allMovies[1].data.results);
     settopRated(allMovies[2].data.results);

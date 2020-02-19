@@ -8,7 +8,8 @@ export const HomeWrapper = styled.div`
     border-radius: 100px;
   }
   .slick-arrow:hover,
-  .slick-arrow:active {
+  .slick-arrow:active,
+  .slick-arrow:focus {
     background-color: red !important;
   }
 `;

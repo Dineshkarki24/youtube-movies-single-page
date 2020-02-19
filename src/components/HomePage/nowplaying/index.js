@@ -23,20 +23,21 @@ export default function NowPlaying({ movie }) {
       </div>
       <Slider {...settings}>
         {movie.map(function(movie) {
-          console.log(movie);
           return (
             <React.Fragment>
-              <Col>
-                <Card>
-                  <Card.Img
-                    variant="top"
-                    src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-                  />
-                  <Card.Body>
-                    <span>{movie.title}</span>
-                  </Card.Body>
-                </Card>
-              </Col>
+              <Link to={`/movies/${movie.id}`}>
+                <Col>
+                  <Card>
+                    <Card.Img
+                      variant="top"
+                      src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+                    />
+                    <Card.Body>
+                      <span>{movie.title}</span>
+                    </Card.Body>
+                  </Card>
+                </Col>
+              </Link>
             </React.Fragment>
           );
         })}
